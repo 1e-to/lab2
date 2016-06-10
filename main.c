@@ -19,5 +19,13 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
+	double discriminant;
+	discriminant = sqrt((b ^ 2) - (4 * a * c));
+
+	if (discriminant < 0) {
+		printf("This equation has noo roots\n");
+		exit(EXIT_SUCCESS);
+	}
+
 	return EXIT_SUCCESS;
 }
