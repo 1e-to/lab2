@@ -27,13 +27,13 @@ int main(int argc, char *argv[])
 		exit(EXIT_SUCCESS);
 	} else if (discriminant == 0) {
 		double x;
-		x = - b / 2 * a;
+		x = - b / (2 * a);
 		printf("There is only one root:\n%f\n", x);
 		exit(EXIT_SUCCESS);
 	} else if (discriminant > 0) {
 		double x1, x2;
-		x1 = (- b + sqrt(discriminant)) / 2 * a;
-		x2 = (- b - sqrt(discriminant)) / 2 * a;
+		x1 = (- b + sqrt(discriminant)) / (2 * a);
+		x2 = (- b - sqrt(discriminant)) / (2 * a);
 		printf("There are two roots:\nx1 = %f\tx2 = %f\n", x1, x2);
 		exit(EXIT_SUCCESS);
 	}
