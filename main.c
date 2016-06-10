@@ -14,5 +14,10 @@ int main(int argc, char *argv[])
 	b = atoi(argv[2]);
 	c = atoi(argv[3]);
 
+	if (a == 0) {
+		fprintf(stderr, "First coefficient must be positive\n");
+		exit(EXIT_FAILURE);
+	}
+
 	return EXIT_SUCCESS;
 }
