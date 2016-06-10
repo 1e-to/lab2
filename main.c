@@ -15,12 +15,12 @@ int main(int argc, char *argv[])
 	c = atoi(argv[3]);
 
 	if (a == 0) {
-		fprintf(stderr, "First coefficient must be positive\n");
+		fprintf(stderr, "First coefficient must be positive!\n");
 		exit(EXIT_FAILURE);
 	}
 
 	double discriminant;
-	discriminant = sqrt((b * b) - (4 * a * c));
+	discriminant = (b * b) - (4 * a * c);
 
 	if (discriminant < 0) {
 		printf("This equation has noo roots\n");
@@ -29,6 +29,13 @@ int main(int argc, char *argv[])
 		double x;
 		x = - b / 2 * a;
 		printf("There is only one root:\n%f\n", x);
+		exit(EXIT_SUCCESS);
+	} else if (discriminant > 0) {
+		double x1, x2;
+		x1 = (- b + sqrt(discriminant)) / 2 * a;
+		x2 = (- b - sqrt(discriminant)) / 2 * a;
+		printf("There are two roots:\nx1 = %f\tx2 = %f\n", x1, x2);
+		exit(EXIT_SUCCESS);
 	}
 
 	return EXIT_SUCCESS;
