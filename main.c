@@ -20,11 +20,15 @@ int main(int argc, char *argv[])
 	}
 
 	double discriminant;
-	discriminant = sqrt((b ^ 2) - (4 * a * c));
+	discriminant = sqrt((b * b) - (4 * a * c));
 
 	if (discriminant < 0) {
 		printf("This equation has noo roots\n");
 		exit(EXIT_SUCCESS);
+	} else if (discriminant == 0) {
+		double x;
+		x = - b / 2 * a;
+		printf("There is only one root:\n%f\n", x);
 	}
 
 	return EXIT_SUCCESS;
